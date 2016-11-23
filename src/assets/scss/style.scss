@@ -1,0 +1,182 @@
+@import 'variables';
+
+$base-padding: 12px;
+$color-red: red;
+$color-blue: #336C99;
+$color-green: #41B883;
+$color-yellow: #fff9dd;
+$color-brown: #703720;
+$color-text: #333;
+$color-grey: #666;
+$color-light-grey: #999;
+
+*, *:after {
+  box-sizing: border-box
+}
+      
+html, body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.4;
+  background: #fefefe
+}
+
+body { border-top: 10px solid $color-blue }
+
+body, 
+input[type='text'],
+select {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  color: #333;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input[type='text'], 
+select {
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  
+  &:hover { border-color: $color-green !important }  
+  
+  &:focus {
+    cursor: default;
+    outline-width: 0 !important;
+  }
+}
+
+input[type='checkbox'] {
+  cursor: pointer
+}
+
+a {
+  color: $color-blue;
+  text-decoration: none;
+  transition: all 0.15s ease-out;
+  
+  &:hover {
+    color: tint($color-blue, 20%);
+    text-decoration: underline
+  }
+}
+
+small { color: #666 }
+
+.clearfix:after, 
+.clear {
+  display: block;
+  content: '';
+  width: 100%;
+  clear: both
+}
+
+/* Header */
+
+h1 {
+  margin: 0;
+  margin-bottom: $base-padding;
+  position: relative;
+}
+
+h1 input,
+.header .address {
+  border: none;
+  width: 100%;
+  padding: 6px 0;
+  border-bottom: 1px dashed #eee;
+  background: transparent;
+  
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $color-green;
+    background: #fff
+  }
+}
+
+h1 input {
+  font-size: 1.4em;
+  font-weight: bold
+}
+
+.header p { position: relative }
+.header .address { font-size: 1em }
+
+.header .icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 16px;
+  margin-top: -8px;
+  width: auto;
+  opacity: 0.3;
+  pointer-events: none;
+  transition: all 0.15s ease-out
+}
+
+.header h1 input:hover + img, 
+.header p input:hover + img {
+  opacity: 0.6;
+}
+
+.header h1 input:focus + img, 
+.header p input:focus + img {
+  opacity: 0;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-top: $base-padding*2
+}
+  
+h4 {
+  margin-bottom: 8px
+}
+
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto
+}
+
+.editor ul, 
+.preview ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+  > li {
+    transition: all 0.15s ease-out;
+  }
+}
+
+.preview ul {
+  > li {
+    padding: 6px 0; 
+  }
+}
+
+.editor { 
+  padding: $base-padding; 
+}
+
+
+/* Multiselect */
+.multiselect {
+  li { padding: 0 }
+  span { font-size: 16px }
+}
+
+
+@media (min-width: 700px) {
+
+  h1 input { font-size: 2em }
+
+  .editor {
+    float: left;
+    width: 60%;
+    padding: $base-padding*2;
+    border-right: 1px solid #ddd;
+    margin-bottom: 100px;
+  }
+}
