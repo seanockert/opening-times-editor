@@ -4,9 +4,9 @@ Part of an admin interface to set the open and close times of a department for e
 Built in Vue.js
 
 #Demo
-https://seanockert.com/projects/opening-times-editor
+https://seanockert.com/projects/opening-times
 
-#Requirements
+#Design requirements
 - Toggle each day of the week as open or closed
 - Set an open and close time for each day
 - Allow for a break in the day (eg. open 9am-11am and 1pm-5pm)
