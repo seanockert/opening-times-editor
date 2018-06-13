@@ -3,7 +3,7 @@ Part of an admin interface to set the open and close times of a department for e
 Built in Vue.js
 
 ## Demo
-https://seanockert.com/projects/opening-times
+https://so-opening-times-editor.surge.sh
 
 ## Installation
 Install the dependencies:
